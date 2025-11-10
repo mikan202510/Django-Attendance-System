@@ -68,7 +68,7 @@
   
 　　Windows
   
-　　.\.venv\Scripts\Activate.ps1
+　　.\.venv\Scripts\Activate.ps1　（正しくは.\です）
 
 - 3.依存パッケージ
   
