@@ -80,7 +80,10 @@
   
 　　Windows PowerShell
   
-　　if (!(Test-Path .env)) { New-Item -Name ".env" -ItemType "file" | Out-Null; Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-　testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000" }
+　　if (!(Test-Path .env)) {
+    New-Item -Name ".env" -ItemType "file" | Out-Null
+    Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000"
+}
 
 - 5.データベース初期化 & テストユーザー
 
