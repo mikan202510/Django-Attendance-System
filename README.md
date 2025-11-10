@@ -56,52 +56,40 @@
 
 ## 実行方法 
 
-- 依存パッケージをインストール
-pip install -r requirements.txt
-- .env ファイルを作成（.env.example をコピー）
-copy .env.example .env
-- Django（バックエンド）を起動
-python manage.py migrate
-python manage.py runserver 8000
-- Streamlit（フロント）を起動
-streamlit run app.py
-- ブラウザで「http://localhost:8501」を開くと勤怠ダッシュボードが表示されます
-
-# 1️⃣ ソース取得
+-1.ソースを取得
 git clone https://github.com/mikan202510/Django-Attendance-System.git
 cd Django-Attendance-System/hrm_py/hrm_py
 
-# 2️⃣ 仮想環境
+-2.仮想環境
 python -m venv .venv
-# Windows
+Windows
 .\.venv\Scripts\Activate.ps1
-# macOS / Linux
-# source .venv/bin/activate
 
-# 3️⃣ 依存パッケージ
+-3.依存パッケージ
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
-# 4️⃣ 環境ファイル（なければ自動生成）
-# Windows PowerShell
+-4.環境ファイル
+Windows PowerShell
 if (!(Test-Path .env)) { New-Item -Name ".env" -ItemType "file" | Out-Null; Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000" }
 
-# 5️⃣ データベース初期化 & テストユーザー
+-5.データベース初期化 & テストユーザー
 python manage.py migrate
 python manage.py shell -c "from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='test@example.com').delete(); U.objects.create_user(username='test@example.com', email='test@example.com', password='test1234')"
 
-# 6️⃣ Djangoサーバー起動
+-6.Djangoサーバー起動
 python manage.py runserver 8000
-別のターミナルで Streamlit（UI）を起動：
 
-bash
-コードをコピーする
+別のターミナルで Streamlit（UI）を起動
 cd Django-Attendance-System/hrm_py/hrm_py
-# 仮想環境を有効化してから
+
+仮想環境を有効化してから
 .\.venv\Scripts\Activate.ps1
 streamlit run app.py
+
 ブラウザで勤怠システムの画面が開きます
 もし自動で開かない場合は、ターミナルに表示されたURLをクリックしてください
+
 ---
 
 ## 想定利用シーン
