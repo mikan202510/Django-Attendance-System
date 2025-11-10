@@ -68,7 +68,7 @@
   
 　　Windows
   
-　　.\ .venv\Scripts\Activate.ps1
+　　.\.venv\Scripts\Activate.ps1
 
 - 3.依存パッケージ
   
@@ -98,7 +98,7 @@
 
 - 8.仮想環境を有効化後
 
-　　.\ .venv\Scripts\Activate.ps1
+　　.\.venv\Scripts\Activate.ps1
   
 　　streamlit run app.py
 
