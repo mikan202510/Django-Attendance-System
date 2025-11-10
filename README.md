@@ -68,7 +68,7 @@
   
 　　Windows
   
-　　.\.venv\Scripts\Activate.ps1　（正しくは.\です）
+　　.\.venv\Scripts\Activate.ps1　（※正しくは.\です）
 
 - 3.依存パッケージ
   
@@ -84,7 +84,8 @@
     New-Item -Name ".env" -ItemType "file" | Out-Null
     Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000"
 }
-
+　　（※コマンドの中の改行コードが崩れています）
+  
 - 5.データベース初期化 & テストユーザー
 
 　　python manage.py migrate
@@ -101,13 +102,15 @@
 
 - 8.仮想環境を有効化後
 
-　　.\.venv\Scripts\Activate.ps1
+　　.\.venv\Scripts\Activate.ps1　（※正しくは.\です）
   
 　　streamlit run app.py
 
 　　ブラウザで勤怠システムの画面が開きます
   
 　　もし自動で開かない場合は、ターミナルに表示されたURLをクリックしてください
+
+  （※GitHubの使用上、上手く表現できてない部分があります）
 
 ---
 
