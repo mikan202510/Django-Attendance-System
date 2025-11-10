@@ -84,13 +84,15 @@
     New-Item -Name ".env" -ItemType "file" | Out-Null
     Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000"
 }
-　　（※コマンドの中の改行コードが崩れています）
+　　（※コマンドの中のコードが崩れています）
   
 - 5.データベース初期化 & テストユーザー
 
 　　python manage.py migrate
   
 　　python manage.py shell -c "from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='test@example.com').delete(); 　　　　　　U.objects.create_user(username='test@example.com', email='test@example.com', password='test1234')"
+
+  　　（※コマンドの中のコードが見にくくなっています）
 
 - 6.Djangoサーバー起動
 
