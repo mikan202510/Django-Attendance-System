@@ -57,33 +57,41 @@
 ## 実行方法 
 
 - 1.ソースを取得
+  
 git clone https://github.com/mikan202510/Django-Attendance-System.git
 cd Django-Attendance-System/hrm_py/hrm_py
 
 - 2.仮想環境
+  
 python -m venv .venv
 Windows
 .\.venv\Scripts\Activate.ps1
 
 - 3.依存パッケージ
+  
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
 - 4.環境ファイル
+  
 Windows PowerShell
 if (!(Test-Path .env)) { New-Item -Name ".env" -ItemType "file" | Out-Null; Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000" }
 
 - 5.データベース初期化 & テストユーザー
+
 python manage.py migrate
 python manage.py shell -c "from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='test@example.com').delete(); U.objects.create_user(username='test@example.com', email='test@example.com', password='test1234')"
 
 - 6.Djangoサーバー起動
+
 python manage.py runserver 8000
 
 - 7.別のターミナルで Streamlit（UI）を起動
+
 cd Django-Attendance-System/hrm_py/hrm_py
 
 - 8.仮想環境を有効化後
+
 .\.venv\Scripts\Activate.ps1
 streamlit run app.py
 
