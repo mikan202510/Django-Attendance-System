@@ -58,29 +58,33 @@
 
 ## 実行方法 
 
-- 1.ソースを取得
+- 1.ソースコードの取得
+
+  　以下のコマンドでリポジトリをクローンします
   
 　　git clone https://github.com/mikan202510/Django-Attendance-System.git
   
 　　cd Django-Attendance-System/hrm_py/hrm_py
 
-- 2.仮想環境
+- 2.仮想環境の構築
+
+  　Pythonの仮想環境を作成・有効化します
   
 　　python -m venv .venv
   
-　　Windows
+　　Windowsの場合
   
-　　.\.venv\Scripts\Activate.ps1　（※正しくは.\です）
+　　.\.venv\Scripts\Activate.ps1　（※「..」ではなく「.\」が正しい表記です）
 
-- 3.依存パッケージ
+- 3.依存パッケージのインストール
   
 　　python -m pip install --upgrade pip
   
 　　python -m pip install -r requirements.txt
 
-- 4.環境ファイル
+- 4.環境ファイルの作成
   
-　　Windows PowerShell
+　　PowerShellで以下を実行し、.envファイルを自動生成します
   
 　　if (!(Test-Path .env)) {
     New-Item -Name ".env" -ItemType "file" | Out-Null
