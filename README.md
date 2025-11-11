@@ -12,6 +12,8 @@
 |----------------|
 | ![request](https://raw.githubusercontent.com/mikan202510/django-attendance-system/main/hrm_py/hrm_py/django-attendance-system5.jpeg) |
 
+本アプリは README の手順に従って実行することで、どなたの PC でも動作確認が可能です
+
 # Django × Streamlit 勤怠管理システム ― 打刻と集計の可視化アプリ
 - Django REST Framework と Streamlit を組み合わせた、勤怠打刻と勤務時間集計を自動化・可視化するWebアプリです
 - 出勤・退勤・休憩の打刻API、日次／週次／月次の勤怠集計、グラフ表示を実装
