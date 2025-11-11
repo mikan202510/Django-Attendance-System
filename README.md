@@ -118,7 +118,7 @@
 
   　ユーザー名　test@example.com
 
-　　パスワード　test1234
+　　　パスワード　test1234
 
 ---
 
