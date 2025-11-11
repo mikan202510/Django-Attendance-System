@@ -90,27 +90,30 @@
     New-Item -Name ".env" -ItemType "file" | Out-Null
     Add-Content .env "DEBUG=True`nSECRET_KEY=django-insecure-testkey`nALLOWED_HOSTS=127.0.0.1,localhost`nHRM_API_BASE=http://127.0.0.1:8000"
 }
-　　（※コマンドの中のコードが崩れています）
+
+　　（※GitHub上では改行が崩れています）
   
-- 5.データベース初期化 & テストユーザー
+- 5.データベース初期化とテストユーザーの作成
 
 　　python manage.py migrate
   
 　　python manage.py shell -c "from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='test@example.com').delete(); 　　　　　　U.objects.create_user(username='test@example.com', email='test@example.com', password='test1234')"
 
-  　　（※コマンドの中のコードが見にくくなっています）
+  　　（※GitHub上では改行が崩れています）
 
-- 6.Djangoサーバー起動
+- 6.Djangoサーバーの起動
 
 　　python manage.py runserver 8000
 
-- 7.別のターミナルで Streamlit（UI）を起動
+- 7.Streamlitアプリの起動
+
+  　別のターミナルを開き、同じディレクトリへ移動します
 
 　　cd Django-Attendance-System/hrm_py/hrm_py
 
-- 8.仮想環境を有効化後
+- 8.仮想環境を有効化とUIの起動
 
-　　.\.venv\Scripts\Activate.ps1　（※正しくは.\です）
+　　.\.venv\Scripts\Activate.ps1　（※「..」ではなく「.\」が正しい表記です）
   
 　　streamlit run app.py
 
